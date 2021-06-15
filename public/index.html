@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Catch Me</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="child-container">
+                <div id = "logo-sec">
+                    <img src="./img/tom&jerry.png" alt="Tom&Jerry" id = "logo">
+                    <p><b>Catch Me</b></p>
+                </div>
+                <div class="login-sec">
+                    <h3>Let's Play</h3>
+                    <form action = './game.html' id = "login-form" >
+                        <label><b>Display name</b></label><br>
+                        <input type="text" name="username" placeholder="Display name" required><br>
+                        <label><b>Room</b></label><br>
+                        <input type="text" name="room" placeholder="Room" required><br>
+                        <button id="join-btn"><b>Join</b></button>
+                    </form>
+                </div>
+                <div id = "instructions">                  
+                    <a href="#" data-toggle="popover" title="Instructions" data-html="true" data-content="<p>1. Give usename and room name before joining into the game<br>2. Share the same room name with your friends to play together<br>3. Use up arrow for jumping jerry <br>4. You must jump when tom catches you<br>5.Your score increases if you collect as many cheeses as you can<br>6. Refresh the page if you want to restart the game<br>7. This game is flexible in Desktop only working on mobile version</p>">Click here for instructions</a>
+                </div>
+            </div>
+        </div>
+            <script>
+                $(document).ready(function(){
+                $('[data-toggle="popover"]').popover();   
+                });
+            </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Catch Me</title>
+</head>
+<body>
+    <div class="game-main-container">
+            <div class="game-header">
+                <p><b>Score: </b><span id = "score">0</span></p> 
+            </div>
+            <div class="game">
+                <div id="toy">
+                    <img src="./img/jery.png" class="img-responsive" alt="Jerry" id = "jerry">
+                </div>
+                <div id="obstacle">
+                    <img src="./img/tom.png" alt="Tom" id = "tom">
+                </div>
+                <div id="cheese">
+                    <img src="./img/cheese.png" alt="Cheese" id = "food">
+                </div>
+                <div id="cheese1">
+                    <img src="./img/cheese.png" alt="Cheese1" id = "food-1">
+                </div>
+                
+            </div>  
+            <div class="game-score-board">
+                <div id ="score-board-header"><b>Score Board</b>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered" id="score-board-data">
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Score</th>
+                            <th>Status</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="game-status">
+            </div>
+        </div> 
+    </div>
+    <!-- To read query parameters from js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <!-- To read query parameters from js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

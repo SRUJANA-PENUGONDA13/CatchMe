@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    line-height: 1.4;
+}
+/* Media Queries */
+@media only screen and (max-width: 800px)
+{
+    .child-container
+    {
+        width: 58vw !important;
+        height: 60vh !important;
+        /* box-shadow: 0px 0px 17px 1px white; */
+    }
+    .game-score-board
+    {
+        width: 90vw !important;
+    }
+    #score-board-header
+    {
+        width: 90vw !important;
+    }
+}
+.main-container
+{
+    height: 100vh;
+    background-color: rgb(59, 65, 78);
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.child-container
+{
+    height: 65vh;
+    width: 25vw;
+    border: 2px solid white;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0px 0px 17px 1px white; */
+}
+#logo-sec
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#logo
+{
+    height: 20em;
+    width: 20em;
+    font-size: 4px;
+    background-color: white;
+    top: calc(35vh - 55em);
+}
+.login-sec
+{
+    font-size: 12px;
+    padding: 1em;
+    padding-top: 0;
+    color:rgb(59, 65, 78);
+}
+/* Full-width input fields */
+input[type=text], input[type=password] 
+{
+    width: 100%;
+    padding: 0.5em 0.5em;
+    margin: 0.5em 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#login-form
+{
+  font-size: 1.5em;
+}
+.login-sec h3
+{
+    margin: 0;
+}
+#join-btn
+{
+    width: 100%;
+    background-color:rgb(59, 65, 78);
+    height: 2.5em;
+    color: white;
+}
+
+/* game page */
+.game-main-container
+{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #264348;
+}
+.game-header
+{
+    width: 100vw;
+    height: 7vh;
+    font-size: 20px;
+    color: white;
+    border: 2px solid #6B7593 ;
+    background-color:  #6B7593;
+    text-align: right;
+    padding : 0.5em 1.5em 1em 0;
+}
+.game
+{
+    height: 43vh;
+    width: 100vw;
+    border: 2px solid #6B7593;
+    z-index: 0;
+}
+.game-score-board
+{
+    height: 40vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    border: 2px solid #6B7593 ;
+}
+
+.game-status
+{
+    width: 100vw;   
+}
+#score-board-header
+{
+    height: 7vh;
+    width: 35vw;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: #6B7593;
+}
+#toy, #obstacle, #cheese, #cheese1
+{
+    height: 20em;
+    width: 20em;
+    font-size: 4px;
+    background-color: white;
+    position: relative;
+    top: calc(43vh - 21em);
+    
+}
+#toy{
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+#obstacle
+{
+    left: 100vw;
+    top: calc(43vh - 21em - 20em);
+    animation: obstacle 4s infinite;
+    z-index: -1;
+}
+
+#cheese
+{
+    left: 80vw;
+    top: calc(43vh - 21em - 20em - 10em);
+    animation: cheese 6s infinite;
+    z-index: -1;
+}
+
+#cheese1
+{
+    left: 80vw;
+    top: calc(43vh - 21em - 20em - 10em - 10em);
+    animation: cheese 3s infinite;
+    z-index: -1;
+}
+.jump
+{
+    position: relative;
+    animation: jump 1s linear;
+}
+#jerry,#tom
+{
+    height: 20em;
+    width: 20em;
+}
+#food,#cheese,#cheese1,#food-1
+{
+    height: 10em;
+    width: 10em;
+}
+
+ /* Keyframes used to change the css from starting of animation to end */
+@keyframes jump 
+{
+    from 
+    {
+        left: 0px;
+    }
+    to 
+    {
+        left: 50px;
+    }
+    0%
+    {
+        top: calc(35vh - 21em);
+    }
+    30%
+    {
+        top: calc(35vh - 60em);
+    }
+    50%
+    {
+        top: calc(35vh - 80em);
+    }
+    80%
+    {
+        top: calc(35vh - 60em);
+        
+    }
+    100%
+    {
+        top: calc(35vh - 21em);
+    } 
+    
+}
+
+@keyframes obstacle
+{
+    0%
+    {
+        left: 100vw;
+    }
+    
+    100%
+    {
+        left: -10em;
+    }
+    
+}
+@keyframes cheese
+{
+    0%
+    {
+        left: 100vw;
+    }
+    
+    100%
+    {
+        left: 18em;
+    }
+    
+}
