@@ -78,12 +78,9 @@ input[type=text], input[type=password]
 }
 #login-form
 {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
-.login-sec h3
-{
-    margin: 0;
-}
+
 #join-btn
 {
     width: 100%;
